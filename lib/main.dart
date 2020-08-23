@@ -10,14 +10,40 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            backgroundColor: Colors.grey,
+            backgroundColor: Colors.teal,
             body: SafeArea(
-                child: Container(
-              width: 100.0,
-              height: 100.0,
-              margin: EdgeInsets.fromLTRB(50.0, 30.0, 50.0, 30.0),
-              padding: EdgeInsets.only(left: 10.0),
-              child: Text('Test'),
+                child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  width: 100.0,
+                  color: Colors.red,
+                ),
+                SizedBox(width: 20.0),
+                Container(
+                  width: 100.0,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Container(
+                        width: 100.0,
+                        height: 100.0,
+                        color: Colors.yellow,
+                      ),
+                      Container(
+                        width: 100.0,
+                        height: 100.0,
+                        color: Colors.green,
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(width: 20.0),
+                Container(
+                  width: 100.0,
+                  color: Colors.blue,
+                ),
+              ],
             ))));
   }
 }
